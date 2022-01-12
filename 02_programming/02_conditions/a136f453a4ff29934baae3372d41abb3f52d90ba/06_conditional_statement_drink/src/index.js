@@ -16,8 +16,6 @@ const francis = {
 // respectively, to the question "Can he / she drink alcohol?".
 
 
-let canFriedaDrinkAlcohol =  frieda.age > 18 ? true : false;
+//let canFriedaDrinkAlcohol =  frieda.age > 18 ? true : false;
 
 let canFrancisDrinkAlcohol = francis.age > 18 ? true : false;
-
-
