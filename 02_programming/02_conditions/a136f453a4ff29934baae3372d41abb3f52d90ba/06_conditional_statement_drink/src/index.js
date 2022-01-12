@@ -4,6 +4,20 @@
 //   `age` (an integer) and `name`, (obviously a string)
 
 
-
+const frieda = {
+  age : 22,
+  name : "Frieda",
+};
+const francis = {
+  age : 17,
+  name : "Francis",
+};
 // Create two variables `canFriedaDrinkAlcohol` and `canFrancisDrinkAlcohol` to answer,
 // respectively, to the question "Can he / she drink alcohol?".
+
+
+let canFriedaDrinkAlcohol =  frieda.age > 18 ? true : false;
+
+let canFrancisDrinkAlcohol = francis.age > 18 ? true : false;
+
+
