@@ -13,7 +13,7 @@ const odinRequest = "Mjöllnir";
 // using the object method to get all values (google is your friend)
 
 
-const armouryWithNamesOnly = [armoury.spear, armoury.hammer, armoury.chain, armoury.sword, armoury.shoes, armoury.horn];
+const armouryWithNamesOnly = [Object.values(armoury)];
 // Create a constant isTheRequestInArmoury bound to the check of the presence
 // of odinRequest in armouryWithNamesOnly
 
