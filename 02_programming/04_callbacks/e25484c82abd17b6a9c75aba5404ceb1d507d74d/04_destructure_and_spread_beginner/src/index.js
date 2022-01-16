@@ -19,16 +19,16 @@ let student = {
 
 
 let developer = {
-  // code here
+  ...student,
+  ...knowledge,
 };
-
 
 
 let application = ["bug", "code", "code", "code", "code", "code", "code", "code", "code"];
 
 
-// code here
-
+let [bug, ...code] = ["bug", "code", "code", "code", "code", "code", "code", "code", "code"];
+console.log(code);
 
 module.exports = {
   developer,
