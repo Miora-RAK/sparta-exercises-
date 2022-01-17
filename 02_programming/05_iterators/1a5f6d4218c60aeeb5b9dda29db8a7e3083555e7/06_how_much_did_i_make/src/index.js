@@ -1,5 +1,8 @@
 function howMuchDidIMake(invoices) {
-  // Code here
+  return invoices
+    .filter((invoice)=> (invoice.waiter === "Yourself"))
+    .map((invoice)=> (invoice.tip))
+    .reduce((a,b) => (a + b));
 }
 
 const invoices = [
