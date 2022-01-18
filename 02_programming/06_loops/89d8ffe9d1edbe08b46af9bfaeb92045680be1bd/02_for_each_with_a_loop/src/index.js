@@ -4,9 +4,6 @@ function forEachLoop(numbers,log) {
   for(let i = 0; i < numbers.length; i++){
     log( numbers[i]);
   }
-
-
-
 }
 
 
