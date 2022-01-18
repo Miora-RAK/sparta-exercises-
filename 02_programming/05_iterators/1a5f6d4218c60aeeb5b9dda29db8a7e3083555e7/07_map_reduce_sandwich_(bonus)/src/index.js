@@ -1,5 +1,5 @@
 function slice(ingredients) {
-  // Code here
+
 }
 
 function makeSandwich(ingredients) {
