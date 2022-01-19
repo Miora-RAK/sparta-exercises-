@@ -1,6 +1,7 @@
 function numberGame(reader, min = 1, max = 100) {
   console.log("Welcome ! \nYou have to find the right number, \nbetween 1 and 100! \nGood luck!!");
   let randomNumber = Math.round(Math.random() * (max - min) + min);
+  console.log(randomNumber);
 
   const gameQuestion = () => {
     return reader.question("Enter a number", (number) => {
@@ -19,8 +20,8 @@ function numberGame(reader, min = 1, max = 100) {
           gameQuestion();
         } else if (number === randomNumber) {
           console.log(`${number} \nYou won!`);
-          reader.close();
         }
+        reader.close();
       }
     });
   };
