@@ -27,8 +27,5 @@ function numberGame(reader, min = 1, max = 100) {
   };
   gameQuestion();
 }
-function loopQuestion(reader) {
-  reader.question("Bien essayé , try again! ", (secondTry) => {});
-}
 
 module.exports = numberGame;
