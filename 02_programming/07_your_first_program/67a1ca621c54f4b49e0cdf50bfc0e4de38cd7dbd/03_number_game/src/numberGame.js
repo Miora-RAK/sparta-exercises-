@@ -18,7 +18,7 @@ function numberGame(reader, min = 1, max = 100) {
         } else if (number > randomNumber) {
           console.log(`${number} \nToo high`);
           gameQuestion();
-        } else if (number === randomNumber) {
+        } else {
           console.log(`${number} \nYou won!`);
           reader.close();
         }
