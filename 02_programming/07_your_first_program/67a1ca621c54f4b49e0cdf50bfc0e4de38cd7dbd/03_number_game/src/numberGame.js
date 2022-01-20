@@ -20,8 +20,8 @@ function numberGame(reader, min = 1, max = 100) {
           gameQuestion();
         } else if (number === randomNumber) {
           console.log(`${number} \nYou won!`);
+          reader.close();
         }
-        reader.close();
       }
     });
   };
