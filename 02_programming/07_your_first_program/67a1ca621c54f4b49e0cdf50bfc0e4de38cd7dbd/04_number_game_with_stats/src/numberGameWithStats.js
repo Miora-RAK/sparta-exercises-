@@ -2,7 +2,7 @@ function numberGameWithStats(reader, min = 1, max = 100) {
   console.log("Welcome ! \nYou have to find the right number, \nbetween 1 and 100! \nGood luck!!");
   let randomNumber = Math.round(Math.random() * (max - min) + min);
   console.log(randomNumber);
-  let numberTry = 0;
+  let numberTry = 1;
   let numberTryList = [];
 
   const gameQuestion = () => {
@@ -28,9 +28,13 @@ function numberGameWithStats(reader, min = 1, max = 100) {
           gameQuestion();
           numberTryList.push(number);
           numberTry += 1;
-        } else if (number === randomNumber) {
-          console.log(`${number} \nYou won! ${numberTry}`);
-          console.log(`You guessed it in ${numberTry} tries`);
+        } else {
+          console.log(`${number} \nCongratulations!! ;) You won!!!!`);
+          if (numberTry === 1) {
+            console.log(`You guessed it in ${numberTry} try`);
+          } else {
+            console.log(`You guessed it in ${numberTry} tries`);
+          }
           reader.close();
         }
       }
