@@ -1,12 +1,13 @@
 function square(squareSize) {
   let star = "";
-  for (let i = squareSize; i <= squareSize; i++) {
-    for (let j = i; j <= squareSize; j++) {
-      console.log((star += "*".repeat(i)));
-    }
-    console.log("*".repeat(i));
+
+  for (let i = 1; i <= squareSize; i++) {
+    star += "*";
+  }
+  for (let i = 1; i <= squareSize; i++) {
+    console.log(star);
   }
 }
-square(5);
+console.log(square(5));
 // Do not remove the following line, it is for tests
 module.exports = square;
