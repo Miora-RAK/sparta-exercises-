@@ -7,3 +7,4 @@ const reader = readline.createInterface({
 });
 
 calculator(reader);
+export { reader };
