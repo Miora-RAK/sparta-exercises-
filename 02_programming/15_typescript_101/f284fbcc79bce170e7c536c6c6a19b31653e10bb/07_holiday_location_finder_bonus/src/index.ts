@@ -8,3 +8,4 @@ const reader = readline.createInterface({
 });
 
 holidayLocationFinder(reader);
+export { reader };

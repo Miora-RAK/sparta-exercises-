@@ -1,7 +1,7 @@
 // Format user input.
-function sanitizeUserInput() {
-  // Write your code here
-}
+// function sanitizeUserInput() {
+//    return newRegex([A-Z])\w+);
+// }
 
 // Leave the line below for tests to work properly.
-export { sanitizeUserInput };
+// export { sanitizeUserInput };
