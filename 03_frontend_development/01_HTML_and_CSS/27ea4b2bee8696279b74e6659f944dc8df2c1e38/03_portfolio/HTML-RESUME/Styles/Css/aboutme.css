@@ -1,0 +1,35 @@
+h1 {
+  color: #f1f1f1;
+  font-family: Montserrat, Helvetica, sans-serif;
+  font-size: 25px;
+  padding-top: 10em;
+  padding-bottom: 0.5em;
+  margin-left: 15em;
+  text-align: center;
+  white-space: nowrap;
+}
+h2 {
+  color: black;
+  font-family: "Clicker Script", cursive;
+  font-size: 3em;
+  font-style: italic;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  margin-left: 8em;
+  white-space: nowrap;
+}
+
+.home {
+  height: 25em;
+  display: flex;
+  overflow: hidden;
+  background: #81b29a;
+  opacity: 0.7;
+}
+.profil {
+  border-radius: 50%;
+  width: 20%;
+  display: flex;
+  margin-left: 35em;
+  margin-bottom: 2em;
+}
