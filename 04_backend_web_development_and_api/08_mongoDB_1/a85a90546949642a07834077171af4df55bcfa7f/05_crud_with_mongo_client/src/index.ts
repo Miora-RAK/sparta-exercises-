@@ -1,7 +1,4 @@
 import { MongoClient } from "mongodb";
-import { findManyCountries } from "./findManyCountries";
-import { findOneCountry } from "./findOneCountry";
-import { insertOneCountry } from "./insertOneCountry";
 import { showCollections } from "./showCollections";
 
 const databaseUrl = `${process.env.MONGODB_DATABASE_URL}`;
