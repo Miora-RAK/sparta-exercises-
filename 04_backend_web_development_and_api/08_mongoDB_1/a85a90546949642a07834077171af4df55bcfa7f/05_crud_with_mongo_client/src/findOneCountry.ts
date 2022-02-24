@@ -1,6 +1,6 @@
-import { Db } from "mongodb";
+import { Db, WithId, Document } from "mongodb";
 
-export function findOneCountry(db: Db) {
+export async function findOneCountry(db: Db): Promise<WithId<Document>> {
   // code your function here
 
   return db

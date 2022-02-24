@@ -1,6 +1,6 @@
 import { Db } from "mongodb";
 
-export function deleteOneCountry(db: Db) {
+export async function deleteOneCountry(db: Db): Promise<boolean> {
   // code your function here
   return db
     .collection("worldAtlas")

@@ -1,15 +1,16 @@
-import { Db, ObjectId } from "mongodb";
+import { Db, ObjectId, Condition } from "mongodb";
 type Country = {
+  _id: ObjectId;
   name: string;
   capital: string;
   continent: string;
 };
-export function insertOneCountry(db: Db, country: Db): Promise<ObjectId> {
+export async function insertOneCountry(db: Db, country: Country): Promise<Condition<ObjectId>> {
   // code your function here
   return db
-    .collection("worldAtlas")
+    .collection<Country>("worldAtlas")
     .insertOne(country)
-    .then(() => {
-      return country;
+    .then((country) => {
+      return country.insertedId;
     });
 }

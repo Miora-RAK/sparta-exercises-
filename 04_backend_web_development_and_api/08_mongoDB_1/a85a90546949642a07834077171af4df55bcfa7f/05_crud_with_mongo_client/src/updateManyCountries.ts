@@ -1,16 +1,17 @@
-import { Db } from "mongodb";
+import { Db, ObjectId, WithId, Document } from "mongodb";
 
-export function updateManyCountries(db: Db) {
+type Country = {
+  _id: ObjectId;
+  name: string;
+  capital: string;
+  continent: string;
+};
+export async function updateManyCountries(db: Db): Promise<WithId<Document>[]> {
   // code your function here
-  // updateMany
-  return (
-    db
-      .collection("worldAtlas")
-      .updateMany({ continent: "Europe" }, { $set: { continent: "EU" } })
-      // .find({ continent: "Europe" })
-      // .toArray()
-      .then((countries) => {
-        return countries;
-      })
-  );
+  return db
+    .collection("worldAtlas")
+    .updateMany({ continent: "Europe" }, { $set: { continent: "EU" } })
+    .then(() => {
+      return db.collection("worldAtlas").find({ continent: "EU" }).toArray();
+    });
 }

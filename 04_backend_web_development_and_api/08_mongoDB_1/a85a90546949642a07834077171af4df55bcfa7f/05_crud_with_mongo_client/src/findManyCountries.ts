@@ -1,6 +1,6 @@
-import { Db } from "mongodb";
+import { Db, WithId, Document } from "mongodb";
 
-export function findManyCountries(db: Db) {
+export async function findManyCountries(db: Db): Promise<WithId<Document>[]> {
   // code your function here
   return db
     .collection("worldAtlas")

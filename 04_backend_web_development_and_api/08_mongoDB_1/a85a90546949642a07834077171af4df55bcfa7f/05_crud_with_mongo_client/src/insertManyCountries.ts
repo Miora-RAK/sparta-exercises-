@@ -1,4 +1,4 @@
-import { Db } from "mongodb";
+import { Db, InsertOneResult, FilterOperators, ObjectId } from "mongodb";
 type ArrayOfCountries = {
   acknowledged: boolean;
   insertedCount: number;
@@ -8,9 +8,16 @@ type ArrayOfCountries = {
     2: string;
   };
 };
-// {"acknowledged": true, "insertedCount": 3, "insertedIds": {"0": "621722ce95c086c94c30c8d7", "1": "621722ce95c086c94c30c8d8", "2": "621722ce95c086c94c30c8d9"}}
 
-export function insertManyCountries(db: Db, arrayOfCountries: Db[]) {
+export async function insertManyCountries(
+  db: Db,
+  arrayOfCountries: Db[],
+): Promise<string | number | void | InsertOneResult<ArrayOfCountries> | ObjectId | FilterOperators<ObjectId>> {
   // code your function here
-  return db.collection("worldAtlas").insertMany(arrayOfCountries);
+  return db
+    .collection("worldAtlas")
+    .insertMany(arrayOfCountries)
+    .then((countries) => {
+      return countries.insertedCount;
+    });
 }
