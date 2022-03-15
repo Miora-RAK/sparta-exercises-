@@ -23,11 +23,11 @@ const CardBody = (props) => {
 
       <button onClick={onClick}>{buttonText}</button>
       {showScreenshots ? (
-        <img
-          src={props.screenshots.map((element) => {
-            return <img src={element.url} key={element.url} />;
+        <div>
+          {props.screenshots.map((element, index) => {
+            return <img src={element} key={index} />;
           })}
-        />
+        </div>
       ) : null}
     </div>
   );
