@@ -1,7 +1,7 @@
 import React from "react";
 
 const Form = () => {
-  const [formText, setFormText] = React.useState("");
+  const [formText, setFormText] = React.useState(formText);
   const [error, setError] = React.useState("");
   const stringPatternValidation = (stringVal) => {
     return /\s/g.test(stringVal);
