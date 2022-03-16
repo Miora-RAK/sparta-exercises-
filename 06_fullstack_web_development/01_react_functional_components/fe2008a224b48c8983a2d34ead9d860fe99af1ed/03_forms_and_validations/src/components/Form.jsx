@@ -1,7 +1,7 @@
 import React from "react";
 
 const Form = () => {
-  const [formText, setFormText] = React.useState(formText);
+  const [formText, setFormText] = React.useState("");
   const [error, setError] = React.useState("");
   const stringPatternValidation = (stringVal) => {
     return /\s/g.test(stringVal);
@@ -9,7 +9,7 @@ const Form = () => {
   const handleInputText = (event) => {
     const value = event.target.value;
     setFormText(event.target.value);
-    stringPatternValidation(value) ? setError("*no spaces allowed") : setError("");
+    stringPatternValidation(value) ? setError("*no spaces allowed") : null;
   };
   // const handleFormInfos = (event) => {
   //   return setFormText(event.target.value);
@@ -27,7 +27,7 @@ const Form = () => {
           placeholder="a space"
           value={formText}
         />
-        <p className="text-danger">{error && error}</p>
+        <p className="text-danger">{error}</p>
       </div>
 
       <button type="submit" className="btn btn-primary">
