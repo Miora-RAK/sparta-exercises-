@@ -16,9 +16,9 @@ const TimersList: React.FC = () => {
     return setSeconds(0);
   };
   React.useEffect(() => {
-    // const addTimer = (): void => {
-    //   return setSeconds((seconds) => seconds + 1);
-    // };
+    const addTimer = (): void => {
+      return setSeconds((seconds) => seconds + 1);
+    };
     return setSeconds((seconds) => seconds + 1);
     // if (isActive) {
     //   setInterval(() => {
@@ -27,7 +27,7 @@ const TimersList: React.FC = () => {
     // } else if (!isActive && seconds !== 0) {
     //   clearInterval();
     // }
-  }, []);
+  }, [seconds]);
   // const addTimer = (): void => {
   //   console.log("add");
   //   return setSeconds((seconds) => seconds + 1);
